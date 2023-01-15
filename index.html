@@ -4,28 +4,50 @@
   <meta charset="UTF-8">
   <title>CityTraffic</title>
   <link rel="stylesheet" href="./style.css">
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="container">
-  <div class="head">
-    <content>
-      <h1 id="title">CityTraffic</h1>
-      <img src="./bus.png" alt = "Bus">
-    </content>
-  </div>
-  <br>
-  <button class="custom-btn btn-1" onClick="myFunction()">Read More</button>
-  <content>
-    <h2>This is a subtitle</h2>
-    <hr>
-    <p>Since a previous update of Google Chrome, this effect is not working anymore like before. I used 'text-fill-color' together with 'background-clip'. Now I changed it to 'mix-blend-mode'. This is alot easier in my opinion. You can still find the "old" version commented out in the CSS.</p>
-  </content>
-</div>
+<!-- Note: This example only works with Windows Insider Preview Builds 16237+. -->
+<header>
+  <div id="gonnaBeOnTheBottom">
+    <div id = "text-style">
+      Градски транспорт Силистра
+    </div>
+  </div>       
+</header>
+<aside>
+  <div id = 'map'></div>      
+  <script>
+    var map = L.map('map', {
+    minZoom: 13,
+    maxBounds: [
+        //south west
+        [43.968604, 26.938477],
+        //north east
+        [44.163243, 27.487793]
+        ], 
+
+    }).setView([44.0728, 27.2131],13);
+        L.tileLayer('https://api.maptiler.com/maps/openstreetmap/256/{z}/{x}/{y}.jpg?key=GJNOEGDBmA0dLU4ia4Ab', {attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',}).addTo(map);
+        var marker = L.marker([44.07984742015729, 27.236824035644535]).addTo(map);
+    
+  </script>
+<!--                                                                      umap.openstreetmap.fr/en/map/untitled-map_854453?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false" -->
+</aside>
+<footer>
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li>
+<button class="link">За нас</button>
+          </li>
+          <li>
+<button class="link">Докладвай за проблем</button>
+        </ul>
+</footer>
 
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <!-- <script  src="./script.js"></script> -->
 
 </body>
 </html>
