@@ -41,7 +41,7 @@ body {
     "header header header"
     "aside aside aside"
     "footer footer footer";
-	grid-template-rows: min(80px) 150% auto;
+	grid-template-rows: min(80px) 700px auto;
 	grid-template-columns: 0% 1fr 40% ;
 	grid-gap: 5px;
   height: 100%;
