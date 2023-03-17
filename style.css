@@ -44,9 +44,11 @@ body {
 	grid-template-rows: min(80px) 700px auto;
 	grid-template-columns: 0% 1fr 40% ;
 	grid-gap: 5px;
-  height: 100%;
   margin: 15px;  
-  background-image: url('https://drive.google.com/uc?export=view&id=13RKdt5m9mpKCa1_nPMCHqmP7CMcFY_C8');
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('images/bus.png');
+  background-size: cover;
+  background-position: center;
 }
 
 #btn-1
