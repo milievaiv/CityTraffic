@@ -1,4 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');*/
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('images/bus.png');
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+.header{
+  color: #fff;
+}
+
 
 button {
   padding:0px 0px;
@@ -35,7 +84,6 @@ button {
 }
 
 body { 
-	font-family: segoe-ui_normal,Segoe UI,Segoe,Segoe WP,Helvetica Neue,Helvetica,sans-serif;
 	display: grid;
 	grid-template-areas: 
     "header header header"
@@ -43,7 +91,7 @@ body {
     "footer footer footer";
 	grid-template-rows: min(80px) 700px auto;
 	grid-template-columns: 0% 1fr 40% ;
-	grid-gap: 5px;
+	grid-gap: 50px;
   margin: 15px;  
   height: 100vh;
   background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('images/bus.png');
@@ -62,9 +110,8 @@ body {
 }
 
 footer h6 {
-  margin-left: 17px;
-  margin-bottom: -10px;
-  font-family: Oswald, sans-serif;
+  margin-left: 0px;
+  margin-bottom: 10px;
   font-size: 20px;
   margin-top: 10px;
   color: #ffffff;
@@ -85,7 +132,6 @@ button.link:hover {
 
 header {
 	background: #707070;
-  font-family: 'Oswald', sans-serif;
 	grid-area: header;
   position:relative;
   font-size: 30px;
@@ -115,7 +161,6 @@ gap {
 
 #text-style{
   margin: 0 0 10px 10px;
-  font-family: 'Oswald', sans-serif;
 }
 
 subtitle {
