@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>CityTraffic</title>
-  <link rel="stylesheet" href="./style1.css">
+  <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,23 +11,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="body-1">
   <!-- Note: This example only works with Windows Insider Preview Builds 16237+. -->
-  <div class="header">
-    <div class ="banner">
-      <div class="navbar">
-          <h1>CityTraffic</h1>
-        <!--<p>Градски транспорт за Силистра.</p>-->
-        <ul>
-            <li><a href= "home.html">HOME</a></li>
-            <!--<li><a href= "#">АВТОБУСИ</a></li>
-            <li><a href= "#">СПИРКИ</a></li>-->
-            <li><a href= "schedule.html">SCHEDULE</a></li>
-            <li><a href= "map.html">MAP</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+        <div class="navbar">
+                    <!-- <div class="navbar"> -->
+                    <div class="custom-h1">
+                        <h1 class="first-half">SILIS</h1>
+                        <h1 class="second-half">TRANS</h1>
+                    </div>
+                    <!--<p>Градски транспорт за Силистра.</p>-->
+                    <ul>
+                        <li><a href= "home.html">НАЧАЛО</a></li>
+                        <!--<li><a href= "#">АВТОБУСИ</a></li>
+                        <li><a href= "#">СПИРКИ</a></li>-->
+                        <li><a href= "schedule.html">ГРАФИК</a></li>
+                        <li><a href= "map.html">КАРТА</a></li>
+                    </ul>
+                    <!-- </div> -->
+        </div>
+
+
   <!--<header>
     <div id="gonnaBeOnTheBottom">
       <div id = "text-style">
@@ -37,37 +39,22 @@
   </header>-->
   <aside>
     <div id = 'map'></div>      
-    <script>
-      var LeafIcon = L.Icon.extend({
-      options: {
-        iconSize:     [50, 50],
-        //shadowAnchor: [4, 62],
-        popupAnchor:  [50, 50]
-      }
-  });
-
-      var map = L.map('map').setView([44.0728, 27.2131],13);
-          L.tileLayer('http://77.71.64.51/osm/{z}/{x}/{y}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-          var marker = L.marker([44.07984742015729, 27.236824035644535],  {icon: busIcon}).addTo(map);
-    </script>
+    <script src="map.js"></script>
   <!--                                                                      umap.openstreetmap.fr/en/map/untitled-map_854453?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&allowEdit=false&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=undefined&captionBar=false" -->
   </aside>
   <footer>
-          <h6>Categories</h6>
+          <!-- <h6 class="footer-title">Categories</h6> -->
           <ul class="footer-links">
             <li>
-  <button class="link">За нас</button>
+  <button class="link custom-button">За нас</button>
             </li>
             <li>
-  <button class="link">Докладвай за проблем</button>
+  <button class="link custom-button">Докладвай за проблем</button>
           </ul>
   </footer>
 
   <!-- partial -->
     <!-- <script  src="./script.js"></script> -->
-</div>
 </body>
 </html>
 
